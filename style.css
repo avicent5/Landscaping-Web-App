@@ -130,11 +130,42 @@ p{
 .photo_gallery_container{
     position: relative;
     text-align: center;
-    height: 750px;
+    height: 800px;
     width: 100%;
 }
 .closing_container{
     height: 500px;
     width: 100%;
     text-align: center;
+    background-color: #EDE8D0;
+    position: relative;
+}
+.contact_btn{
+    height: 45px;
+    width: 350px;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    background-color: rgb(90, 134, 25);
+    border-radius: 0;
+    color: white;
+    border: solid  rgb(90, 134, 25);
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+.contact_btn:hover{
+    background-color: greenyellow;
+    border: solid greenyellow;
+    color: black;
+}
+.business_info{
+    position: absolute;
+    bottom: 0px;
+    height: 140px;
+    width: 100%;
+    background-color: #36454F;
+}
+.xo{
+    height: 500px;
+    width: 100%;
+    background-color: red;
 }
