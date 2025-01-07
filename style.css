@@ -164,8 +164,100 @@ p{
     width: 100%;
     background-color: #36454F;
 }
-.xo{
+.intro_div{
     height: 500px;
     width: 100%;
-    background-color: red;
+    background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(aboutUsPageImages/IntroSectionBackground.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+}
+.intro_div_text{
+    text-align: center;
+    height: 300px;
+    width: 800px;
+    color: #FFFDD0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.history_section_container{
+    height: 700px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image_div{
+    height: 500px;
+    width: 80%;
+    margin: 0px;
+}
+.history_description_text{
+    height: 600px;
+    width: 30%;
+    margin: 50px;
+}
+.mission_container{
+    height: 600px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mission_description_text{
+    height: 300px;
+    width: 30%;
+    margin: 50px;
+}
+.mission_img_div{
+    height: 500px;
+    width: 80%;
+    margin: 0px;
+}
+.our_values_container{
+    height: 600px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.our_values_imgDiv{
+    height: 520px;
+    width: 80%;
+    margin: 0px;
+}
+.values_text{
+    height: 300px;
+    width: 30%;
+    margin: 50px;
+}
+.service_area_container{
+    height: 700px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.service_area_text{
+    height: 500px;
+    width: 30%;
+    margin: 50px;
+    text-align: center;
+}
+.service_area_img{
+    height: 600px;
+    width: 80%;    
+}
+.end_div{
+    height: 150px;
+    width: 100%;
+    background-color: #36454F;
+    text-align: center;
 }
