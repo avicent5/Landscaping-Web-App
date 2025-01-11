@@ -261,3 +261,76 @@ p{
     background-color: #36454F;
     text-align: center;
 }
+.lawn_care_container{
+    height: 650px;
+    width: 100%;
+    position: relative; 
+    border-bottom-left-radius:50%;
+    border-bottom-right-radius:50%;
+}
+.lawn_care_container img{
+    border-bottom-left-radius:35%;
+    border-bottom-right-radius:35%;
+}
+.lawn_care_text{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3.5rem;
+    height: 500px;
+    width: 700px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.lawn_care_description{
+    height: 600px;
+    width: 100%;
+}
+.lawn_care_description p{
+    line-height: 2;
+    margin-left: 50px;
+    margin-right: 50px;
+    
+    font-size: 1.2rem;
+}
+.landscape_design_container{
+    height: 650px;
+    width: 100%;
+    position: relative;
+}
+.landscape_design_text{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    font-size: 3rem;
+    height: 500px;
+    width: 900px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+}
+.landscape_design_description p{
+    line-height: 2;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 1.2rem;
+}
+.landscape_design_container img{
+    border-bottom-left-radius: 35%;
+    border-bottom-right-radius: 35%;
+}
+.landscape_design_description{
+    height: 600px;
+    width: 100%;
+}
+.landscape_lighting_container{
+    height: 650px;
+    width: 100%;
+    position: relative;
+    background-color: #4d630b;
+}
