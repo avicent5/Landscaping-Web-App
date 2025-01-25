@@ -374,3 +374,59 @@ p{
     margin-left: 50px;
     margin-right: 50px;
 }
+.calendar_container{
+    height: 800px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.calendar{
+    height: 600px;
+    width: 600px;
+    border: solid 2px black;
+    border-radius: 1rem;
+    position: relative;
+}
+.month_and_year{
+    height: 100px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.calendar_toggles{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    width: 300px;
+    position: absolute;
+    top: 0px;
+    left: 300px;
+    
+}
+.calendar_toggle_buttons{
+    font-size: 2.5rem;
+    margin: 10px;
+    cursor: pointer;
+}
+.days{
+    height: 60px;
+    width: 100%;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.days li{
+    display: inline-block;
+    margin: 25px;
+    font-size: 1.1rem;
+}
+.month_days{
+    height: 60px;
+    width: 100%;
+    background-color: beige;
+    margin-top: 20px;
+}
