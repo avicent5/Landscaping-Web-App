@@ -15,8 +15,12 @@ let matrix = [
   const dayOfMonth = today.getDate(); // Get the day of the month
   console.log(dayOfMonth); // This will output 19 (or the current day of the month)
 
-  const sampleMonth = new Date("January 21, 25");
+  const sampleMonth = new Date("January 1, 25");
   console.log("Current Month in # : " + (sampleMonth.getMonth() + 1));
   console.log("The date is: " + sampleMonth.getDate());
   console.log("Weekday number is: " + sampleMonth.getDay());
+  let x = sampleMonth.getDay();
+  console.log(x);
+  sampleMonth.setFullYear(2025, 2, 0); // gets last day of month
+  console.log(sampleMonth.getDate());// prints last day of month
   // try to use arrays to match and print them on your calenar????
