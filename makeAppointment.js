@@ -1,7 +1,26 @@
 const months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 let dayCounter = 1;
 // create getters and setters (read about javascript hoisting)
+let fowardArrrow = document.querySelector('.calendar_toggle_buttons_foward');
+let backwatdArrow = document.querySelector('.calendar_toggle_buttons_prev');
+// didnt work cause it was a '.' instead of '='
+let sanpleDiv = '<div class="month_days_row1">';
+let x = document.querySelector('.month_days_row1');
+let y = document.querySelector('.month_days_row2');
+let parentElement = x.parentNode; // Store the parent node
+let nextSibling = x.nextSibling; // Store the next sibling node
 
+backwatdArrow.addEventListener('click', () => {
+    parentElement.insertBefore(x, nextSibling);
+})
+fowardArrrow.addEventListener('click', () => {
+   
+     x.remove();
+     parentElement.insertBefore(x, nextSibling);
+    createCalendar();
+   
+    
+})
 let getCurrentDay = (date) => {
     // function gets the actual day of the month; Ex: Jan 19, 2025 -> func returns 19
     let currentDate = new Date(date);
@@ -22,6 +41,7 @@ let getMonthAsString = (date) => {
 
 const createCalendar = () => {
     for(let i = 1; i <=5 ; i++){
+  
         let tempDiv = document.createElement("div");
         tempDiv.style.width = "100%";
         tempDiv.style.height = "60px";
@@ -78,6 +98,8 @@ const createCalendar = () => {
             }
           
         }
+        // Remodify the inner html
+        // use classlist.remove ??
         //Math to printing previous calendar dates => (tempVar - 1) - current j position
         // get position of day 1 of current month that your trying to print.
         // find out last day of previous month so you can subtract

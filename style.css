@@ -406,7 +406,12 @@ p{
     left: 300px;
     
 }
-.calendar_toggle_buttons{
+.calendar_toggle_buttons_prev{
+    font-size: 2.5rem;
+    margin: 10px;
+    cursor: pointer;
+}
+.calendar_toggle_buttons_foward{
     font-size: 2.5rem;
     margin: 10px;
     cursor: pointer;
