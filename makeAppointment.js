@@ -16,7 +16,7 @@ backwatdArrow.addEventListener('click', () => {
 fowardArrrow.addEventListener('click', () => {
    
      x.remove();
-     parentElement.insertBefore(x, nextSibling);
+     //parentElement.insertBefore(x, nextSibling);
     createCalendar();
    
     
@@ -98,6 +98,7 @@ const createCalendar = () => {
             }
           
         }
+        // call a function to replace contents for each month?
         // Remodify the inner html
         // use classlist.remove ??
         //Math to printing previous calendar dates => (tempVar - 1) - current j position
