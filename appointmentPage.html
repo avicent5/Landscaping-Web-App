@@ -22,7 +22,7 @@
         
         <div class="calendar">
           <div class="month_and_year">
-            <h1>January 2025</h1>
+            <h1 class="monthYear">January 2025</h1>
           </div> 
 
           <div class="calendar_toggles">
@@ -39,22 +39,88 @@
             <li>Sat</li>
           </div>
           <div class="month_days_row1">
-            <!-- <li class="myList"></li> --> 
+            <li class="listElement0Row1"></li>
+            <li class="listElement1Row1"></li>
+            <li class="listElement2Row1"></li>
+            <li class="listElement3Row1"></li>
+            <li class="listElement4Row1"></li>
+            <li class="listElement5Row1"></li>
+            <li class="listElement6Row1"></li>
           </div>
           <div class="month_days_row2">
-            
+            <li class="listElement0Row2"></li>
+            <li class="listElement1Row2"></li>
+            <li class="listElement2Row2"></li>
+            <li class="listElement3Row2"></li>
+            <li class="listElement4Row2"></li>
+            <li class="listElement5Row2"></li>
+            <li class="listElement6Row2"></li>
           </div>
           <div class="month_days_row3">
-            
+            <li class="listElement0Row3"></li>
+            <li class="listElement1Row3"></li>
+            <li class="listElement2Row3"></li>
+            <li class="listElement3Row3"></li>
+            <li class="listElement4Row3"></li>
+            <li class="listElement5Row3"></li>
+            <li class="listElement6Row3"></li>
           </div>
           <div class="month_days_row4">
-            
+            <li class="listElement0Row4"></li>
+            <li class="listElement1Row4"></li>
+            <li class="listElement2Row4"></li>
+            <li class="listElement3Row4"></li>
+            <li class="listElement4Row4"></li>
+            <li class="listElement5Row4"></li>
+            <li class="listElement6Row4"></li>
           </div>
           <div class="month_days_row5">
-            
+            <li class="listElement0Row5"></li>
+            <li class="listElement1Row5"></li>
+            <li class="listElement2Row5"></li>
+            <li class="listElement3Row5"></li>
+            <li class="listElement4Row5"></li>
+            <li class="listElement5Row5"></li>
+            <li class="listElement6Row5"></li>
           </div>
           <!--2d arrays could help alhough this aint java ;( -->
           <!--Use js to load numbers on calendar; similar to what you did for the restaraunt order menu-->
+        </div>
+        <div class="appointment_booking_div">
+          <!--Must inlude first and last name, email, address, phone # and a selection od different types of services to choose-->
+          <h1 style="text-align: center;padding-top: 25px;">Book Now!</h1>
+          <div class="nameInputContainer">
+            <div class="name_input_box_div">
+              <input class="inputBox" type="text" placeholder="First Name">
+            </div>
+            <div class="name_input_box_div">
+              <input class="inputBox" type="text" placeholder="Last Name">
+            </div>
+          </div>
+          <div class="name_input_box_div">
+            <input type="text" class="largerInputBox" placeholder="Email">
+          </div>
+          <div class="name_input_box_div">
+            <input type="text" class="largerInputBox" placeholder="Home Address">
+          </div>
+          
+          <div class="nameInputContainer">
+            <div class="name_input_box_div">
+              <input class="inputBox" type="text" placeholder="Phone Number">
+            </div>
+            <div class="dropdownMenu">
+              <div class="select">
+                  <span class="selectedElement">Standard Lawn Care</span>
+                  <div class="caret"> </div>
+              </div>
+              <ul class="dropdownOptions">
+                <li class="active">Standard Lawn Care</li>
+                <li>Landscape Design</li>
+                <li>Landscape Lighting</li>
+              </ul>
+              
+            </div>
+          </div>
         </div>
     </div>
     <script src="makeAppointment.js"></script>

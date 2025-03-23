@@ -1,5 +1,5 @@
 const months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-let dayCounter = 1;
+
 // create getters and setters (read about javascript hoisting)
 let fowardArrrow = document.querySelector('.calendar_toggle_buttons_foward');
 let backwatdArrow = document.querySelector('.calendar_toggle_buttons_prev');
@@ -9,15 +9,45 @@ let x = document.querySelector('.month_days_row1');
 let y = document.querySelector('.month_days_row2');
 let parentElement = x.parentNode; // Store the parent node
 let nextSibling = x.nextSibling; // Store the next sibling node
+let monthCounter = 0;
+// dropdown menu code below
+let dropDowns = document.querySelector('.dropdownMenu');
+// calendar doesnt print since JS is bad below
+
+    let select = document.querySelector('.select');
+    let caret = document.querySelector('.caret');
+    let menu = document.querySelector('.dropdownOptions');
+    let options = document.querySelectorAll('.dropdownOptions li'); // remember to use querySELECTORALL when dealing muliple 
+    let selected = document.querySelector('.selectedElement');
+    
+    select.addEventListener('click', () => {
+        select.classList.toggle('select-clicked');
+        caret.classList.toggle('caret-rotate');
+        menu.classList.toggle('dropdownOptions-open');
+    });
+    // calendar doesnt print since JS is bad below
+
+    options.forEach(option => {
+        option.addEventListener('click', ()=>{
+            selected.innerText = option.innerText;
+            select.classList.remove('select-clicked');
+            caret.classList.remove('caret-rotate');
+            menu.classList.remove('dropdownOptions-open');
+            options.forEach(option => {
+                option.classList.remove('active');
+            });
+            option.classList.add('active');
+        })
+    });
 
 backwatdArrow.addEventListener('click', () => {
-    parentElement.insertBefore(x, nextSibling);
+    monthCounter--;
+    modifyCalendar(months[monthCounter], monthCounter);
+   
 })
 fowardArrrow.addEventListener('click', () => {
-   
-     x.remove();
-     //parentElement.insertBefore(x, nextSibling);
-    createCalendar();
+    monthCounter++;
+   modifyCalendar(months[monthCounter], monthCounter);
    
     
 })
@@ -40,6 +70,7 @@ let getMonthAsString = (date) => {
 }
 
 const createCalendar = () => {
+    let dayCounter = 1;
     for(let i = 1; i <=5 ; i++){
   
         let tempDiv = document.createElement("div");
@@ -60,7 +91,7 @@ const createCalendar = () => {
             let currentMonthDay = getCurrentDay(date);
             let dayNumID = getCurrentDayNum(date);
             if(dayNumID == j){
-                let createdListItem = document.createElement("li");
+                let createdListItem = document.querySelector(`.listElement${j}Row${i}`);
                 createdListItem.style.display = "inline-block";
                 createdListItem.style.margin = "32px";
                 createdListItem.style.fontSize = "1.1rem";
@@ -79,7 +110,7 @@ const createCalendar = () => {
                     let prevMonthlastDay = tempDate.getDate();
                     let dateCalc = (dayNumID - 1) - j; // might cause problems
                     let prevMonthDay = prevMonthlastDay - dateCalc;
-                    let createdListItem = document.createElement("li");
+                    let createdListItem = document.querySelector(`.listElement${j}Row${i}`);
                     createdListItem.style.display = "inline-block";
                     createdListItem.style.margin = "32px";
                     createdListItem.style.fontSize = "1.1rem";
@@ -87,7 +118,7 @@ const createCalendar = () => {
                     tempDiv.appendChild(createdListItem);
                 }
                 else{
-                    let createdListItem = document.createElement("li");
+                    let createdListItem = document.querySelector(`.listElement${j}Row${i}`);
                     createdListItem.style.display = "inline-block";
                     createdListItem.style.margin = "32px";
                     createdListItem.style.fontSize = "1.1rem";
@@ -113,6 +144,44 @@ let calendarDates = (monthString) => {
     let currentMonth = new Date('January 1, 25');
     let currentDay = currentMonth.getDate();
     let currenyDayWeekNum = currentMonth.getDay();
+}
+let modifyCalendar = (month, monthsArrayIndex) => {
+    let dayCounter = 1;
+    let currentMonth = document.querySelector('.monthYear');
+    currentMonth.innerHTML = month + " 2025";
+for(let i = 1; i <= 5; i++){
+
+
+    for(let j = 0; j < 7; j++){
+            let date = `${months[monthsArrayIndex]} ${dayCounter}, 25`;
+            let currentMonthDay = getCurrentDay(date);
+            let dayNumID = getCurrentDayNum(date);
+            if(dayNumID == j){
+                let createdListItem = document.querySelector(`.listElement${j}Row${i}`);
+                createdListItem.innerHTML = `${currentMonthDay}`;
+                dayCounter = dayCounter + 1;
+            }
+            else{
+                let tempDate = new Date(date);
+                let month = tempDate.toLocaleString('default', {month: 'long'});
+                if(month == "January"){
+                    let tempDate = new Date();
+                    tempDate.setFullYear(2024, 1, 0);
+                    let prevMonthlastDay = tempDate.getDate();
+                    let dateCalc = (dayNumID - 1) - j; // might cause problems
+                    let prevMonthDay = prevMonthlastDay - dateCalc;
+                    let createdListItem = document.querySelector(`.listElement${j}Row${i}`);
+                    createdListItem.innerHTML = `${prevMonthDay}`;
+                }
+                else{
+                    let createdListItem = document.querySelector(`.listElement${j}Row${i}`);
+                    createdListItem.innerHTML = "5";
+                   
+                }
+               
+            }
+    }
+}
 }
 /*
 let populateCalendar = () => {
