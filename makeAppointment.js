@@ -141,14 +141,7 @@ const createCalendar = () => {
         }
       
         
-        // call a function to replace contents for each month?
-        // Remodify the inner html
-        // use classlist.remove ??
-        //Math to printing previous calendar dates => (tempVar - 1) - current j position
-        // get position of day 1 of current month that your trying to print.
-        // find out last day of previous month so you can subtract
-        // focus on getting January first
-        // figuring out January should give you a better idea on how to tackle the rest of the months
+    
     }
 }
 
@@ -221,34 +214,7 @@ let appointmentConfirmation = () => {
     disableBackgroundd.setAttribute('class', 'overlay');
     document.body.appendChild(disableBackgroundd);
 }
-/*
-let populateCalendar = () => {
-    for(let i = 1; i <= 5; i++){
-        for(let j = 0; j < 7; j++ ){
-            let createdListItem = document.createElement("li");
-            createdListItem.style.display = "inline-block";
-            createdListItem.style.margin = "25px";
-            createdListItem.style.fontSize = "1.1rem";
-            // if statement can check if the current index is == to the weekday number (ex: j[3] = 3(wednesday))
-            createdListItem.innerHTML = `${j}`;
-            let currentDiv = document.querySelector(`.month_days_row${i}`);
-            currentDiv.appendChild(createdListItem);
-            document.querySelector('.calendar').appendChild(currentDiv);
-        }
-    }
-}
-*/
-// figure out methods to get month # (Feb = 2) how many days in a month, when does each day land (Mon ??, Tues??)
+
 
 createCalendar();
 //populateCalendar();
-
-
-/*
- let tempDiv = document.querySelector(`.month_days_row${i}`);
-        tempDiv.setAttribute("style","height: 60px");
-        tempDiv.setAttribute("style", "width: 100%");
-        tempDiv.setAttribute("style", "background-color: beige");
-        tempDiv.setAttribute("style", "margin-top: 20px");
-    }
-*/
