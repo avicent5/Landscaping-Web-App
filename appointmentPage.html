@@ -14,9 +14,18 @@
         <a href="aboutUsPage.html">About Us</a>
         <a href="servicesPage.html">Services</a>
         <a href="appointmentPage.html">Make an Appointment</a>
-        <a href="">Contact Us</a>
+        <a href="contactUs.html">Contact Us</a>
     </div>
-    <h1 style="text-align: center; margin-top: 50px; font-size: 2.5rem;">Make an appointment!</h1>
+    <h1 style="text-align: center; margin-top: 50px; font-size: 2.5rem;">Schedule an appointment!</h1>
+    <p style="text-align: center; font-size: 1.3rem;">Simply choose a date on the calendar, fill out our form, and schedule!</p>
+    <button class="appointment_btn" style="display: block; margin: auto;" onclick="appointmentConfirmation()">Book Appointment!</button>
+
+    <div class="appointmentConfirmationDiv">
+      <img src="confirmationPic.png" alt="" height="100px" width="100px" style="border-radius: 50%;">
+      <h1>Appointment Confirmed!</h1>
+      <p class="customerName">Thanks for booking </p>
+      <button class="returnHomeBtn" onclick="location.href = 'homepage.html' ">Return Home</button>
+    </div>
     <div class="calendar_container">
         <!--Design: calendar and form side by side-->
         
@@ -39,49 +48,61 @@
             <li>Sat</li>
           </div>
           <div class="month_days_row1">
-            <li class="listElement0Row1"></li>
-            <li class="listElement1Row1"></li>
-            <li class="listElement2Row1"></li>
-            <li class="listElement3Row1"></li>
-            <li class="listElement4Row1"></li>
-            <li class="listElement5Row1"></li>
-            <li class="listElement6Row1"></li>
+            <ul class="calendarList">
+              <li class="listElement0Row1"></li>
+              <li class="listElement1Row1"></li>
+              <li class="listElement2Row1"></li>
+              <li class="listElement3Row1"></li>
+              <li class="listElement4Row1"></li>
+              <li class="listElement5Row1"></li>
+              <li class="listElement6Row1"></li>
+            </ul>
+           
           </div>
           <div class="month_days_row2">
-            <li class="listElement0Row2"></li>
-            <li class="listElement1Row2"></li>
-            <li class="listElement2Row2"></li>
-            <li class="listElement3Row2"></li>
-            <li class="listElement4Row2"></li>
-            <li class="listElement5Row2"></li>
-            <li class="listElement6Row2"></li>
+            <ul class="calendarList">
+              <li class="listElement0Row2"></li>
+              <li class="listElement1Row2"></li>
+              <li class="listElement2Row2"></li>
+              <li class="listElement3Row2"></li>
+              <li class="listElement4Row2"></li>
+              <li class="listElement5Row2"></li>
+              <li class="listElement6Row2"></li>
+            </ul>
+           
           </div>
           <div class="month_days_row3">
-            <li class="listElement0Row3"></li>
-            <li class="listElement1Row3"></li>
-            <li class="listElement2Row3"></li>
-            <li class="listElement3Row3"></li>
-            <li class="listElement4Row3"></li>
-            <li class="listElement5Row3"></li>
-            <li class="listElement6Row3"></li>
+            <ul class="calendarList">
+              <li class="listElement0Row3"></li>
+              <li class="listElement1Row3"></li>
+              <li class="listElement2Row3"></li>
+              <li class="listElement3Row3"></li>
+              <li class="listElement4Row3"></li>
+              <li class="listElement5Row3"></li>
+              <li class="listElement6Row3"></li>
+            </ul>
           </div>
           <div class="month_days_row4">
-            <li class="listElement0Row4"></li>
-            <li class="listElement1Row4"></li>
-            <li class="listElement2Row4"></li>
-            <li class="listElement3Row4"></li>
-            <li class="listElement4Row4"></li>
-            <li class="listElement5Row4"></li>
-            <li class="listElement6Row4"></li>
+            <ul class="calendarList">
+              <li class="listElement0Row4"></li>
+              <li class="listElement1Row4"></li>
+              <li class="listElement2Row4"></li>
+              <li class="listElement3Row4"></li>
+              <li class="listElement4Row4"></li>
+              <li class="listElement5Row4"></li>
+              <li class="listElement6Row4"></li>
+            </ul> 
           </div>
           <div class="month_days_row5">
-            <li class="listElement0Row5"></li>
-            <li class="listElement1Row5"></li>
-            <li class="listElement2Row5"></li>
-            <li class="listElement3Row5"></li>
-            <li class="listElement4Row5"></li>
-            <li class="listElement5Row5"></li>
-            <li class="listElement6Row5"></li>
+            <ul class="calendarList">
+              <li class="listElement0Row5"></li>
+              <li class="listElement1Row5"></li>
+              <li class="listElement2Row5"></li>
+              <li class="listElement3Row5"></li>
+              <li class="listElement4Row5"></li>
+              <li class="listElement5Row5"></li>
+              <li class="listElement6Row5"></li>
+            </ul>
           </div>
           <!--2d arrays could help alhough this aint java ;( -->
           <!--Use js to load numbers on calendar; similar to what you did for the restaraunt order menu-->
@@ -121,6 +142,7 @@
               
             </div>
           </div>
+          
         </div>
     </div>
     <script src="makeAppointment.js"></script>

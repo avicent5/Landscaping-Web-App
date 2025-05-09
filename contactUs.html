@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navigation_div">
+        <img src="images/companyLogo.png" alt="Company Logo" style="float: left; height: 100%; width: 20%">
+        <a href="homepage.html">Home</a>
+        <a href="aboutUsPage.html">About Us</a>
+        <a href="servicesPage.html">Services</a>
+        <a href="appointmentPage.html">Make an Appointment</a>
+        <a href="contactUs.html">Contact Us</a>
+    </div>
+    <div class="message_sent_popUp">
+        <h1 style="margin: 40px;">Message Sent!</h1>
+        <p>We will contact you very soon.</p>
+        <button class="message_sent_btn" onclick="location.href = 'homepage.html'">Return to homepage</button>
+    </div>
+    <div class="contactPage_container">
+        <div class="contactPageSection">
+            <h1 style="padding-top: 20px; font-size: 2.4rem; padding-top: 75px;">Contact Larry's Landscaping</h1>
+            <input type="text" class="clientName" placeholder="Name">
+            <input type="text" class="clientEmail" placeholder="Email">
+            <textarea name="client_message" class="clientMessage" cols="50" rows="20" placeholder="Your Message"></textarea>
+            <button class="message_sent_btn" onclick="messageSent()">Send Message</button>
+        </div>
+        <div class="contactPageSection">
+            <img src="contactUsImages/locationLogo.png" alt="" style="height: 70px; width: 70px; border-radius: 50%; margin: 50px;">
+            <h1>Belmont, California</h1>
+            <img src="contactUsImages/telephoneLogo.png" alt="" style="height: 70px; width: 70px; border-radius: 50%; margin: 50px;">
+            <h1>(617)-619-4520</h1>
+            <img src="contactUsImages/telephoneLogo.png" alt="" style="height: 70px; width: 70px; border-radius: 50%; margin: 50px;">
+            <h1>larrysLandscaping@gmail.com</h1>
+            <p style="margin: 150px; text-align: right;">&copy; 2024 Larrys Landscaping. All Rights Reserved</p>
+        </div>
+    </div>
+    <script src="aboutUs.js"></script>
+</body>
+</html>

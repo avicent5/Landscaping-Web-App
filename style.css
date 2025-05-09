@@ -420,10 +420,11 @@ p{
 .days{
     height: 60px;
     width: 100%;
-    background-color: aqua;
+    background-color: #50C878;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
 }
 .days li{
     display: inline-block;
@@ -445,6 +446,8 @@ p{
     border: solid black 2px;
     border-radius: 1rem;
     margin: 40px;
+    background-color: #021764;
+    color: #9FE2BF;
 }
 .nameInputContainer{
     display: flex;
@@ -492,19 +495,19 @@ p{
     box-sizing: border-box;
 }
 .select{
-    background: #8A9A5B;
+    background: #40B5AD;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 2px solid blue;
+    border: 2px solid  #40B5AD;
     border-radius: 0.5em;
     padding: 1em;
     cursor: pointer;
     transition: 0.3s;
 }
 .select-clicked {
-    border: 2px solid red;
+    border: 2px solid  #40B5AD;
     box-shadow: 0 0 0.8em #1a2421; 
 }
 .select:hover{
@@ -522,6 +525,10 @@ border-right: 5px solid transparent;
 border-top: 6px solid white;
 transition: 0.3s;
 }
+.caret:hover{
+    border-top: 6px solid black;
+  
+}
 .caret-rotate{
     transform: rotate(180deg);
 }
@@ -536,6 +543,7 @@ z-index: 1;
 opacity: 0;
 display: none;
 transition: 0.2s;
+color: black;
 }
 .dropdownOptions li {
 padding: 0.7em 0.5em;
@@ -553,4 +561,151 @@ color: black;
 .dropdownOptions-open{
 display: block;
 opacity: 1;
+}
+.calendar_active{
+    
+    text-align: center;
+    background: #50C878;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+}
+.overlay{
+    /* disbbles the background and dims it (set Z index before container div) */
+    width:100%; height:100%; left:0;/*IE*/ top:0; z-index:5; position:fixed; background-color:gray; opacity: 0.7;
+}
+.appointmentConfirmationDiv{
+    height: 300px;
+    width: 500px;
+    border-radius: 1rem;
+    background-color: white;
+    position: absolute;
+    z-index: 9;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    
+    
+}
+.appointmentConfirmationDiv1{
+    height: 300px;
+    width: 500px;
+    border-radius: 1rem;
+    background-color: white;
+    position: absolute;
+    z-index: 9;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    
+    
+}
+.appointmentConfirmationDiv h1 {
+padding-top: 10px;
+}
+.returnHomeBtn{
+    height: 50px;
+    width: 300px;
+    border-radius: 1rem;
+    font-size: 1.3rem;
+    border: none;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    background-color: darkgreen;
+    color: white;
+}
+.returnHomeBtn:hover{
+    background-color:#50C878;
+    color: black;
+}
+.contactPage_container{
+    display: flex;
+    
+}
+.contactPageSection{
+    height:100vh;
+    width: 100%;
+    background-color: #2f3438;
+    color: white;
+    
+    text-align: center;
+    
+}
+.contactPageSection input{
+    margin: 30px auto;
+    display: block;
+}
+.clientName{
+    height: 40px;
+    width: 400px;
+    background-color: #2f3438;
+    border: solid white 2px;
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 30px;
+}
+.clientName::placeholder{
+    color: white;
+}
+.clientName:focus::placeholder{
+    color: transparent;
+}
+.clientEmail{
+    height: 40px;
+    width: 400px;
+    background-color: #2f3438;
+    border: solid white 2px;
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 30px; 
+}
+.clientEmail::placeholder{
+    color: white;
+}
+.clientEmail:focus::placeholder{
+    color: transparent;
+}
+.clientMessage{
+    border: solid white 3px;
+    background-color: #2f3438;
+    font-size: 1rem;
+    color: white;
+    margin: 30px auto;
+    display: block;
+}
+.clientMessage::placeholder{
+    color: white;
+}
+.clientMessage:focus::placeholder{
+    color: transparent;
+}
+.message_sent_btn{
+    background-color: #0096FF;
+    border: none;
+    height: 40px;
+    width: 350px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: white;
+    transition-duration: 0.4s;
+}
+.message_sent_btn:hover{
+    background-color: #40B5AD;
+    color: black;
+}
+.message_sent_popUp{
+    height: 300px;
+    width: 500px;
+    border-radius: 1rem;
+    background-color: white;
+    position: absolute;
+    z-index: 9;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
 }

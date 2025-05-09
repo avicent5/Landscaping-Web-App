@@ -10,6 +10,7 @@ let y = document.querySelector('.month_days_row2');
 let parentElement = x.parentNode; // Store the parent node
 let nextSibling = x.nextSibling; // Store the next sibling node
 let monthCounter = 0;
+
 // dropdown menu code below
 let dropDowns = document.querySelector('.dropdownMenu');
 // calendar doesnt print since JS is bad below
@@ -72,11 +73,11 @@ let getMonthAsString = (date) => {
 const createCalendar = () => {
     let dayCounter = 1;
     for(let i = 1; i <=5 ; i++){
-  
+  // #50C878 will be hover color for calendar
         let tempDiv = document.createElement("div");
         tempDiv.style.width = "100%";
         tempDiv.style.height = "60px";
-        tempDiv.style.backgroundColor = "beige";
+        tempDiv.style.backgroundColor = "#b5e2ff";
         tempDiv.style.marginTop = "20px";
         tempDiv.style.display = "flex";
         tempDiv.style.alignItems = "center";
@@ -86,18 +87,25 @@ const createCalendar = () => {
         for(let j = 0; j < 7; j++){
             // check if day # match and that the counter does not exceed the max # of days for specific months
             //let x = "69";
+            // use add event listner in if statements when the number is clicked to highlight
             let date = `${months[0]} ${dayCounter}, 25`;
-            
+            let newSelectedDate = document.querySelector(`.listElement${j}Row${i}`);
             let currentMonthDay = getCurrentDay(date);
             let dayNumID = getCurrentDayNum(date);
             if(dayNumID == j){
+                
+               
                 let createdListItem = document.querySelector(`.listElement${j}Row${i}`);
                 createdListItem.style.display = "inline-block";
                 createdListItem.style.margin = "32px";
                 createdListItem.style.fontSize = "1.1rem";
+                createdListItem.style.cursor = "pointer";
                 createdListItem.innerHTML = `${currentMonthDay}`;
                 tempDiv.appendChild(createdListItem);
                 dayCounter = dayCounter + 1;
+             
+
+                 
             }
             else{
                 // take the dayNUmID of the current date and subtract it by the counter 
@@ -122,13 +130,17 @@ const createCalendar = () => {
                     createdListItem.style.display = "inline-block";
                     createdListItem.style.margin = "32px";
                     createdListItem.style.fontSize = "1.1rem";
-                    createdListItem.innerHTML = "5";
+                    createdListItem.innerHTML = "NA";
                     tempDiv.appendChild(createdListItem);
                 }
-               
+              
             }
-          
+            
+           
+    
         }
+      
+        
         // call a function to replace contents for each month?
         // Remodify the inner html
         // use classlist.remove ??
@@ -139,6 +151,18 @@ const createCalendar = () => {
         // figuring out January should give you a better idea on how to tackle the rest of the months
     }
 }
+
+
+let currentSelectedDate = document.querySelectorAll(`.calendarList li`);
+    currentSelectedDate.forEach(selectedDate => {
+    selectedDate.addEventListener('click', () => {
+        currentSelectedDate.forEach(selectedDate => {
+         selectedDate.classList.remove('calendar_active');
+        });
+    selectedDate.classList.add('calendar_active');
+    });
+})
+
 
 let calendarDates = (monthString) => {
     let currentMonth = new Date('January 1, 25');
@@ -175,13 +199,27 @@ for(let i = 1; i <= 5; i++){
                 }
                 else{
                     let createdListItem = document.querySelector(`.listElement${j}Row${i}`);
-                    createdListItem.innerHTML = "5";
+                    createdListItem.style.margin = "29px"
+                    createdListItem.innerHTML = "NA";
                    
                 }
                
             }
     }
 }
+}
+document.querySelector('.appointmentConfirmationDiv').style.display = "none";
+
+let appointmentConfirmation = () => {
+    let temp = document.querySelector('.inputBox');
+    let data = temp.value;
+    document.querySelector('.appointmentConfirmationDiv').style.display = "block";
+    let name = document.querySelector('.customerName');
+    let newText = document.createTextNode(data + "!");
+    name.appendChild(newText);    
+    var disableBackgroundd = document.createElement('div');
+    disableBackgroundd.setAttribute('class', 'overlay');
+    document.body.appendChild(disableBackgroundd);
 }
 /*
 let populateCalendar = () => {

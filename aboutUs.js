@@ -1,26 +1,10 @@
-/*
-let matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-  ];
-  for(let i = 0 ; i < matrix.length; i++){
-    for(let j = 0; j < matrix[i].length; j++){
-        console.log("row " + i + ": " + matrix[i][j]);
-    }
-  }
-*/
+// This JavaScript file is for the contactUs.html file
+let popUp = document.querySelector('.message_sent_popUp');
+popUp.style.display = "none";
 
-  const today = new Date(); // Get today's date
-  const dayOfMonth = today.getDate(); // Get the day of the month
-  console.log(dayOfMonth); // This will output 19 (or the current day of the month)
-
-  const sampleMonth = new Date("January 1, 25");
-  console.log("Current Month in # : " + (sampleMonth.getMonth() + 1));
-  console.log("The date is: " + sampleMonth.getDate());
-  console.log("Weekday number is: " + sampleMonth.getDay());
-  let x = sampleMonth.getDay();
-  console.log(x);
-  sampleMonth.setFullYear(2025, 2, 0); // gets last day of month
-  console.log(sampleMonth.getDate());// prints last day of month
-  // try to use arrays to match and print them on your calenar????
+let messageSent = () => {
+  popUp.style.display = "block";
+  var blockBacground = document.createElement('div');
+  blockBacground.setAttribute('class', 'overlay');
+  document.body.appendChild(blockBacground);
+}
